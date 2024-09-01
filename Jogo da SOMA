@@ -1,0 +1,35 @@
+
+#include <stdlib.h>
+#include <time.h>
+
+int main ()
+{
+	int num1,num2,resultado,soma;
+	char jogar_novamente;
+	
+	srand(time(0));
+	
+	do
+	{
+	num1=rand() % 10 +1 ;
+	num2=rand() % 10 +1 ;
+	soma=num1 + num2;
+	
+	printf("Qual eh o resultado de %d + %d\t\t", num1,num2);
+	scanf("%d", &resultado);
+	
+	if(resultado == soma){
+		printf("Parabens voce acertou\t");
+	}else{
+		printf("Voce Errou, o resultado correto eh %d\t", soma);
+	}
+	printf("deseja jogar novamente ? (s/n)\t");
+	scanf(" %c", &jogar_novamente);
+	
+	}while(jogar_novamente == 's' || jogar_novamente == 'S');
+	printf("Obrigado por jogar");
+	
+	
+return 0;
+	
+}
