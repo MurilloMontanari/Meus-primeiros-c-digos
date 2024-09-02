@@ -1,0 +1,40 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main()
+{
+	int respostas, corretas=0;
+	printf("Pergunta 1\n\n\t");
+	printf("Em que ano o Sao paulo ganhou a ultima libertadores ?\n\n");
+	printf("1 - 2000\n");
+	printf("2 - 2005\n");
+	printf("3 - 1992\n");
+	printf("4 - 1991\n");
+	scanf("%d", &respostas);
+	if(respostas == 2) {
+		corretas++;
+	}
+	printf("Pergunta 2 \n\n\t");
+	printf("Qual jogador fez 91 gols em uma temporada  ?\n\n");
+	printf("1 - Messi\n");
+	printf("2 - Pele\n");
+	printf("3 - Cristiano Ronaldo\n");
+	printf("4 - Lewandoswki\n");
+	scanf("%d", &respostas);
+	if(respostas == 1) {
+		corretas++;
+	}
+	printf("Pergunta 3 \n\n\t");
+	printf("Qual jogador tem mais premios individuais da historia do futebol ? \n\n");
+	printf("1 - Pele\n");
+	printf("2 - Messi\n");
+	printf("3 - Cristiano Ronaldo\n");
+	printf("4 - Diego Maradona\n");
+	scanf("%d", &respostas);
+	if(respostas == 2) {
+		corretas++;
+	}
+	printf("Voce Acertou %d questoes", corretas);
+
+	return 0;
+}
