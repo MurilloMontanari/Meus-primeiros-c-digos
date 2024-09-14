@@ -1,0 +1,37 @@
+//Faça um programa que permita ao usuário informa a quantidade de alunos na sala, em seguida receba a idade de todos os alunos da sala e exiba TODAS AS IDADES em ordem crescente.
+
+
+
+#include <stdio.h>
+
+int main() {
+    int quantidade, i, j, temp;
+    int idades[100]; 
+
+    printf("Digite a quantidade de alunos na sala (máximo 100): ");
+    scanf("%d", &quantidade);
+
+    for (i = 0; i < quantidade; i++) {
+        printf("Digite a idade do aluno %d: ", i + 1);
+        scanf("%d", &idades[i]);
+    }
+
+    for (i = 0; i < quantidade - 1; i++) {
+        for (j = 0; j < quantidade - 1; j++) {
+            if (idades[j] > idades[j + 1]) {
+                
+                temp = idades[j];
+                idades[j] = idades[j + 1];
+                idades[j + 1] = temp;
+            }
+        }
+    }
+
+    printf("\nIdades dos alunos em ordem crescente:\n");
+    for (i = 0; i < quantidade; i++) {
+        printf("%d ", idades[i]);
+    }
+
+    printf("\n");
+    return 0;
+}
